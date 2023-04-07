@@ -107,6 +107,7 @@ celerybeat.pid
 env/
 venv/
 ENV/
+hillel_py/
 env.bak/
 venv.bak/
 
