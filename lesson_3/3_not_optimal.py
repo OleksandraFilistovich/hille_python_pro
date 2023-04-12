@@ -4,7 +4,6 @@ from pympler import asizeof
 
 
 def word_finder(file_path, search_pattern, result_path) -> None:
-
     with open("source/results.txt", "w") as result_file:
         with open(file_path, "r") as f:
             for line in f.readlines():

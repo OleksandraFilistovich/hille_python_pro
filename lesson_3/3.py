@@ -18,7 +18,6 @@ def word_finder(file_path, search_pattern, result_path) -> None:
     """Function finds given pattern line in lines of the given file.
     And writes them to the file."""
     with open(result_path, "w") as result_file:
-
         file_read = file_reader(file_path)
 
         for line in file_read:
