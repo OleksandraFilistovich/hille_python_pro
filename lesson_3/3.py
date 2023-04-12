@@ -39,7 +39,7 @@ def line_n_size(file_path) -> tuple[int, int]:
     return f"File size via pympler: {size} B\nNumber of lines: {count}"
 
 
-search_line = input("Input line you want to search in 'rockyou':").lower()
+search_line = input("Input line you want to search in 'rockyou': ").lower()
 search_file = "./source/rockyou_encoded.txt"
 result_file = "./source/results.txt"
 
