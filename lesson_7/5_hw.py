@@ -21,6 +21,18 @@ class TimeTeller:
             time_t = time.ctime()[-13:-5]
             self.h, self.m, self.s = tuple(map(int, time_t.split(':')))
             """
+        """
+        def __init__(
+            self,
+            h=time.localtime().tm_hour,
+            m=time.localtime().tm_min,
+            s=time.localtime().tm_sec,
+        ):
+            self.h = h
+            self.m = m
+            self.s = s
+        """
+
 
     def __str__(self):
         """Print operation."""
