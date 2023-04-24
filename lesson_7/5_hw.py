@@ -33,7 +33,6 @@ class TimeTeller:
             self.s = s
         """
 
-
     def __str__(self):
         """Print operation."""
         return f"{self.h}:{self.m}:{self.s}"
