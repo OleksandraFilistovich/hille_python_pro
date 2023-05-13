@@ -18,14 +18,11 @@ class ExchangeRates:
         if ExchangeRates._initialized:
             return
         self.data = []
-        self._fetch_from_api(urls)
+        asyncio.run(self._fetch_from_api(urls))
 
         ExchangeRates._initialized = True
 
-    def _fetch_from_api(self, urls: list[str]) -> None:
-        asyncio.run(self._async_fetch(urls))
-
-    async def _async_fetch(self, urls: list[str]):
+    async def _fetch_from_api(self, urls: list[str]) -> None:
         async with httpx.AsyncClient() as client:
             tasks = []
             for url in urls:
